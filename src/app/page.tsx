@@ -47,6 +47,9 @@ export default function Home() {
           <h1 className="text-2xl font-bold text-center">
             $SONIC x BONK Whitelist Checker
           </h1>
+          <p className="text-center text-muted-foreground">
+            Total whitelisted wallets: {whitelist.size}
+          </p>
         </CardHeader>
         <CardContent className="space-y-4">
           <Textarea
