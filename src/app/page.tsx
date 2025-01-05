@@ -11,6 +11,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Check, X } from "lucide-react";
+import Telegram from "@/components/icons/telegram";
 
 export default function Home() {
   const [input, setInput] = useState("");
@@ -95,24 +96,10 @@ export default function Home() {
             href="https://t.me/+Pt8MwHxgf8QwMGMy"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+            className=" font-bold hover:text-primary transition-colors flex items-center gap-2"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-send"
-            >
-              <path d="m22 2-7 20-4-9-9-4Z" />
-              <path d="M22 2 11 13" />
-            </svg>
-            created by 3k
+            <Telegram className="w-4 h-4" />
+            by 3k
           </a>
         </CardFooter>
       </Card>
