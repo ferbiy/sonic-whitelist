@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { whitelist } from "@/generatedWhitelist";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -33,6 +33,11 @@ export default function Home() {
     setResults(checkResults);
   };
 
+  const totalWhitelisted = useMemo(
+    () => results.filter((result) => result.isWhitelisted).length,
+    [results]
+  );
+
   return (
     <div className="min-h-screen p-4 md:p-8 relative">
       <div className="fixed inset-0 animated-gradient" />
@@ -57,7 +62,9 @@ export default function Home() {
 
           {results.length > 0 && (
             <div className="space-y-2 mt-4">
-              <h2 className="text-lg font-semibold">Results:</h2>
+              <h2 className="text-lg font-semibold">
+                Results: {totalWhitelisted}/{results.length} whitelisted
+              </h2>
               <div className="space-y-1">
                 {results.map(({ wallet, isWhitelisted }, index) => (
                   <Card
