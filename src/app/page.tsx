@@ -52,17 +52,22 @@ export default function Home() {
             {
               headers: {
                 accept: "*/*",
-                "accept-language": "en-US,en;q=0.9",
-                "sec-ch-ua": '"Not A(Brand";v="24", "Chromium";v="110"',
+                "accept-language":
+                  "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uk;q=0.6,he;q=0.5",
+                "cache-control": "no-cache",
+                pragma: "no-cache",
+                priority: "u=1, i",
+                referer: "https://airdrop.sonic.game/",
+                "sec-ch-ua":
+                  '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
                 "sec-ch-ua-mobile": "?0",
                 "sec-ch-ua-platform": '"macOS"',
                 "sec-fetch-dest": "empty",
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
-                Referer: "https://airdrop.sonic.game/",
-                "Referrer-Policy": "strict-origin-when-cross-origin",
+                "user-agent":
+                  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
               },
-              cache: "no-cache",
               credentials: "include",
               mode: "cors",
             }
